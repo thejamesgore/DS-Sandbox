@@ -9,5 +9,10 @@ class Node {
 }
 
 class LinkedList {
-  constructor(value) {}
+  constructor(value) {
+    const newNode = new Node(value)
+    this.head = newNode
+    this.tail = this.head
+    this.length = 1
+  }
 }
