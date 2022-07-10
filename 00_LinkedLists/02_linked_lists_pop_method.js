@@ -29,14 +29,29 @@ class LinkedList {
     // If there are two or more items then we're going to use two assistant variables to help
     // us track current node position as we will need to iterate through
     let previous = this.head
-    let current = this.head
+    let temp = this.head
 
     // we then use a while loop to iterate through each node
-    while (current.next) {
-      previous = current
-      current = current.next
+    // while temp.next is true i.e. while there is a node to point to run the contents of the loop
+    while (temp.next) {
+      // This will move previous to temp. As the loop only runs while there is a new node to point to
+      // previous will equal the second to last node
+      previous = temp
+      // This will move temp to the next node
+      temp = temp.next
     }
+    // Now we point the tail of the linked list to the second to last node
     this.tail = previous
+    // we then point the tail of the node to null ending the linked list
     this.tail.next = null
+    // we then reduce the length of the linked list by one
+    this.length--
+
+    // If there is only one node
+    if (this.length === 0) {
+      this.head = null
+      this.tail = null
+    }
+    return temp
   }
 }
