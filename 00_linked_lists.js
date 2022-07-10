@@ -1,7 +1,9 @@
 // We create a node class as many methods we use will be creating new nodes
 class Node {
   constructor(value) {
+    // we pass a value to our constructor and this will be the value of the node
     this.value = value
+    // we have a pointer for each node which presently points to null
     this.next = null
   }
 }
