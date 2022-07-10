@@ -38,3 +38,16 @@ class LinkedList {
     return this
   }
 }
+
+let mylinkedList = new LinkedList(11)
+
+console.log(mylinkedList)
+
+mylinkedList.push(3)
+console.log(mylinkedList)
+
+mylinkedList.push(23)
+console.log(mylinkedList)
+
+mylinkedList.push(7)
+console.log(mylinkedList)
