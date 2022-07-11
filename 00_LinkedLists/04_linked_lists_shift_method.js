@@ -12,7 +12,7 @@ class Node {
 
 class LinkedList {
   constructor(value) {
-    const newNode = new Node()
+    const newNode = new Node(value)
     this.head = newNode
     this.tail = this.head
     this.length = 1
