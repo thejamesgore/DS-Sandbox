@@ -11,10 +11,24 @@ class Node {
 
 class LinkedList {
   constructor(value) {
-    const newNode = Node(value)
+    const newNode = new Node(value)
     this.head = newNode
     this.tail = this.head
     this.length = 1
   }
-  set()
+  set(index, value) {
+    if (index < 0 || index >= index.length) return undefined
+    let temp = this.head
+    for (let i = 0; i < index; i++) {
+      temp = temp.next
+    }
+    temp.value = value
+    return temp
+  }
 }
+
+let myLinkedList = new LinkedList(11)
+
+console.log(myLinkedList)
+myLinkedList.set(0, 2)
+console.log(myLinkedList)
